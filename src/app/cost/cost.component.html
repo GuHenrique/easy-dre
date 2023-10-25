@@ -1,0 +1,35 @@
+<form [formGroup]="costForm" (ngSubmit)="onSubmit()">
+    <div class="col mb-3">
+        <label for="costName" class="col-sm-1 col-form-label">Custo</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="costName" formControlName="costName"
+                placeholder="Ex: Aluguel, Luz ...">
+        </div>
+    </div>
+    <div class="col mb-3">
+        <label for="costValue" class="col-sm-1 col-form-label">Valor</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="costValue" formControlName="costValue">
+        </div>
+    </div>
+    <div class="col mb-3">
+        <legend class="col-form-label">Custo fixo?</legend>
+    </div>
+    <div class="col-sm-10">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="fixedCost" id="fixedCostYes" value="Y">
+            <label class="form-check-label" for="fixedCostYes">
+                Sim
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="fixedCost" id="fixedCostNo" value="N" checked>
+            <label class="form-check-label" for="fixedCostNo">
+                Não
+            </label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-4">Cadastrar</button>
+</form>

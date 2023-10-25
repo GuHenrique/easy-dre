@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Custo</th>
+            <th scope="col">Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cost of costs">
+            <td>{{cost.costName}}</td>
+            <td>{{cost.costValue | currency:'BRL'}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>TOTAL: {{totalValue}}</p>
